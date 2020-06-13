@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <title>30秒ドローイング練習サイト</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet"></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
     <header>
-        <h1>30秒ドローイング</h1>
+        <h1>30秒ドローイング練習サイト</h1>
     </header>
     
-    
-    <div class="main">
         <div id="img-box">
-            <img height="500px" style="display:none;">
-        </div><br>
+            <div id="time-meter" style="background: -webkit-linear-gradient(aqua 100%, white 100%, white 100%),linear-gradient(aqua 100%, white 100%, white 100%);"></div>
+            <img height="360px" style="display: none;" id="img">
+            <p style="display: none;" id="textbox"></p>
+        </div>
+        <br>
         <span>表示時間:<select id="time-selector" style="height: 20px; width:55px;"></select></span>
         <span>写真の枚数: <select id="count-selector" style="height: 20px; width:55px;"></select></span>
         <span>休憩時間: <select id="break-selector" style="height: 20px; width:55px;"></select></span>
@@ -23,25 +26,27 @@
     <article>
         <h2>概要</h2>
         <p>制作者が30秒ドローイングで絵の練習を始めようと思って作成したウェブサイトです。</p>
+        <p>現時点で<span id="photo-count"></span>枚の画像が使用できます。</p>
         <h2>使い方</h2>
         <p>(事前に用紙と筆記用具を準備してください)</p>
         <p>写真が切り替わる間隔と写真の枚数をドロップダウンメニューで選択してください。</p>
         <p>「開始する」をクリックすると5秒後に写真が表示されます。</p>
-        <p>写真は指定した間隔で次々と切り替わっていきます。</p>
+        <p>写真は指定した間隔で切り替わっていきます。</p>
+        <p>休憩時間を指定すると、画像が切り替わる前後に休憩が入ります。</p>
         <p>写真のサイズが小さく感じる場合はブラウザの拡大機能をお使いください。</p>
         <h2>使用上の注意</h2>
-        <p>「開始する」のボタンが押された時点で、数十枚の画像をプリロードします。</p>
-        <p>携帯電話等で利用する際は、データ通信量にお気を付けください。</p>
+        <p>このサイトは複数の画像を読み込んで使用します。</p>
+        <p>携帯電話、スマートフォンで利用する際は、データ通信量にお気を付けください。</p>
+        <p>2回目の使用以降は表示される画像が被る場合があります。</p>
         <h2>連絡先</h2>
-        <p>Twitter: <a href="https://twitter.com/Poteto143">@Poteto143</a> Github: <a href="https://github.com/Poteto143">@Poteto143</a></p>
         <p>問題が発生した場合は<a href="https://github.com/Poteto143/30s-drowing.github.io/issues">GithubのIssue</a>にて報告をお願いします。</p>
         <h2>クレジット</h2>
-        <p>当サイトを制作するに当たって、以下のサイトの画像を使わせて頂きました。</p>
+        <p>当サイトを制作するに当たって、以下のサイトの画像を使用しました。</p>
         <p>ありがとうございます。</p>
         <p><a href="http://photosku.com/" target="_blank">フリー写真素材 フォトスク</a></p>
         <p><a href="https://www.pakutaso.com" target="_brank" title="フリー写真素材ぱくたそ" >フリー写真素材ぱくたそ</a></p>
     </article>
-    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
